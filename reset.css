@@ -1,35 +1,39 @@
-html {
+/* Set the box-sizing for all elements to border-box,
+   which includes padding and border in the element's total width and height */
+   html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 16px; /* Base font size for the document */
 }
 
+/* Ensure that all elements, before and after pseudo-elements inherit the box-sizing from their parent.
+   This is used to maintain consistency in box-sizing across all HTML elements in the document */
 *,
 *:after,
-*:before{
+*:before {
     box-sizing: inherit;
 }
 
+/* Remove default margins and padding from common elements to prevent inconsistent spacing across browsers.
+   Also, sets the font-weight to normal to standardize typography */
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, h2, h3, h4, h5, h6,
 p,
 ol,
-ul{
+ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
 }
 
+/* Remove the default list styles from ordered and unordered lists to prevent inconsistent bullet styling */
 ol,
-ul{
+ul {
     list-style: none;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+/* Ensures that images are responsive and scale correctly within their containing elements,
+   prevents images from being displayed larger than their original size */
+img {
+    max-width: 100%; /* Maximum width of images is 100% of their containing element */
+    height: auto;    /* Height is set to auto to maintain the aspect ratio of the image */
 }

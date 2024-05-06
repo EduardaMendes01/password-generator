@@ -1,214 +1,194 @@
-body{
-    background-color:#F0EDEE;
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    color: #0A090C;
-    padding: 2rem;
+/* General styling for the body, setting the background color, default font, font weight, text color, and padding around the content */
+body {
+    background-color: #F0EDEE; /* light grayish background */
+    font-family: "Merriweather", serif; /* serif font for better readability */
+    font-weight: 400; /* normal font weight */
+    color: #0A090C; /* dark grayish color for text */
+    padding: 2rem; /* consistent padding around the content */
 }
 
-main{
+/* Centers the main content and limits its maximum width for better readability on large screens */
+main {
     max-width: 780px;
-    margin: 0 auto;
+    margin: 0 auto; /* centers the content horizontally */
 }
 
-.hero{
-    text-align: center;
-    padding-bottom: 3rem;
+/* Styling for the hero section, mainly used for headings and introductory text */
+.hero {
+    text-align: center; /* centers the text */
+    padding-bottom: 3rem; /* space below the hero section */
 }
 
-.hero .title{
-    font-size: 2rem;
-    font-weight: bold;
-    padding-bottom: 1.5rem;
+/* Styles for the main title in the hero section */
+.hero .title {
+    font-size: 2rem; /* larger text for the title */
+    font-weight: bold; /* bold text for emphasis */
+    padding-bottom: 1.5rem; /* space below the title */
 }
 
+/* Subtitle styles under the main title, smaller font size and different color */
 .hero .subtitle {
     font-size: 1.12rem;
-    color: #07393C;
+    color: #07393C; /* dark teal color for contrast */
 }
 
-.box{
-    background: #fff;
-    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.2);
-    border-radius: 8px;
-    margin-bottom: 3rem;
+/* Box styling for segments of the interface like password display and settings */
+.box {
+    background: #fff; /* white background for content areas */
+    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.2); /* subtle shadow for depth */
+    border-radius: 8px; /* rounded corners */
+    margin-bottom: 3rem; /* space between boxes */
 }
 
-.password{
+/* Flexbox container for password display, aligns items centrally */
+.password {
     display: flex;
-    align-items: center;
-    padding: 1rem 1.5rem;
+    align-items: center; /* centers items vertically */
+    padding: 1rem 1.5rem; /* padding inside the password container */
 }
 
+/* Flex item for input where password is displayed, allows it to grow */
 .password .text {
-    flex: 1;
+    flex: 1; /* takes up all available space */
 }
 
+/* Styles for the input where the password is shown */
 .password .text input {
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 1.8rem;
-    border: none;
-    outline: none;
-    cursor: default;
-    height: 52px;
-    width: 100%;
-    transition: 0.2s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select:none;
-    user-select: none;
+    font-family: "Merriweather", serif; /* consistent font family */
+    font-weight: 900; /* very bold for the password */
+    font-size: 1.8rem; /* large font size for visibility */
+    border: none; /* no border */
+    outline: none; /* removes focus outline */
+    cursor: default; /* default cursor */
+    height: 52px; /* fixed height */
+    width: 100%; /* full width of its container */
+    transition: 0.2s; /* smooth transition for effects */
+    user-select: none; /* prevents text selection */
 }
 
-.password .text input.font-sm{
-    font-size: 1.5rem;
-}
+/* Responsive font sizing for password input under different conditions */
+.password .text input.font-sm { font-size: 1.5rem; }
+.password .text input.font-xs { font-size: 1rem; }
+.password .text input.font-xxs { font-size: 0.9rem; }
 
-.password .text input.font-xs{
-    font-size: 1rem;
-}
-
-.password .text input.font-xxs{
-    font-size: 0.9rem;
-}
-
-.password .actions button{
+/* Button styles in the password area, transparent with a hover effect */
+.password .actions button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+    opacity: 0.7; /* slightly see-through */
+    transition: opacity 0.2s; /* smooth transition for hover opacity */
 }
 
-.security-indicator{
+/* Security indicator bar, small and styled at the bottom */
+.security-indicator {
     height: 10px;
-    background-color: #ddd;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    background-color: #ddd; /* light gray background */
+    border-radius: 8px; /* rounded corners */
 }
 
+/* Styling for different states of the security indicator */
 .security-indicator .bar {
     height: 10px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    transition: all 0.2s;
+    border-radius: 8px; /* rounded corners */
+    transition: all 0.2s; /* smooth transition for all changes */
 }
 
-.security-indicator .bar.completed{
-    border-top-right-radius: 0;
-}
+/* Different color states for the security bar indicating password strength */
+.security-indicator .bar.completed { border-top-right-radius: 0; }
+.security-indicator .bar.critical { background-color: #eb5757; } /* red for weak */
+.security-indicator .bar.warning { background-color: #f2c94c; } /* yellow for moderate */
+.security-indicator .bar.safe { background-color: #27ae60; } /* green for strong */
 
-.security-indicator .bar.critical{
-    background-color: #eb5757;
-}
-
-.security-indicator .bar.warning{
-    background-color: #f2c94c;
-}
-
-.security-indicator .bar.safe{
-    background-color: #27ae60;
-}
-
-.customize{
+/* Padding and title styling in the customization section */
+.customize {
     padding: 1rem 1.5rem;
+    .customize .title {
+        border-bottom: 1px solid #f0f0f0; /* subtle line under title */
+        font-size: 1.75rem; /* larger font size */
+        font-weight: bold; /* bold for emphasis */
+        margin-bottom: 2rem; /* space below the title */
+        padding-bottom: 0.75rem; /* padding under the title */
+    }
 }
 
-.customize .title{
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-}
-
-.customize .actions{
+/* Flexbox layout for customization settings with space between them */
+.customize .actions {
     display: flex;
-    gap: 3rem;
-    color:#2C666E;
+    gap: 3rem; /* space between children */
+    color: #2C666E; /* teal text color */
 }
 
-.customize .password-lenght{
-    flex: 1;
-}
-
-
-.customize .password-lenght .slider{
+/* More detailed styles for the password length slider and related elements */
+.customize .password-length .slider {
     appearance: none;
-    -webkit-appearance: none;
-    height: 10px;
-    background: #dddddd;
+    background: #dddddd; /* light gray slider background */
     outline: none;
     border-radius: 8px;
     width: 100%;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    margin-top: 1rem;
+    opacity: 0.7; /* slightly see-through */
+    transition: opacity 0.2s; /* smooth hover effect */
 }
 
-.customize .password-lenght .slider:hover{
-    opacity: 1;
+/* Hover effect for slider */
+.customize .password-length .slider:hover { opacity: 1; }
+
+/* Thumb handler styles for the slider on different platforms */
+.customize .password-length .slider::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 25px;
+    background: #90DDF0; /* light blue */
+    cursor: pointer;
 }
 
-.customize .password-lenght .slider::-webkit-slider-thumb{
--webkit-appearance: none;
-appearance: none;
-width: 18px;
-height: 18px;
-border-radius: 25px;
-background: #90DDF0;
-cursor: pointer;
-}
-
-.customize .password-lenght .slider::-moz-range-thumb{
+.customize .password-length .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 25px;
-    background: #90DDF0;
+    background: #90DDF0; /* consistent with webkit thumb */
     cursor: pointer;
 }
 
-.checkbox-container{
+/* Styles for checkbox labels and containers */
+.checkbox-container {
     display: block;
     position: relative;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
+    padding-left: 2rem; /* space for custom checkbox */
+    margin-bottom: 1rem; /* space between checkboxes */
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    user-select: none; /* prevents text selection */
 }
 
-.checkbox-container input{
+/* Hides the default checkbox input */
+.checkbox-container input {
     position: absolute;
-    height: 0;
-    width: 0;
-    opacity: 0;
+    opacity: 0; /* hidden but accessible */
     cursor: pointer;
 }
 
+/* Custom checkbox appearance */
 .checkbox-container .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #90DDF0;
-    transition: all 0.2s;
+    background-color: #90DDF0; /* light blue background */
+    transition: all 0.2s; /* smooth transition for background color change */
 }
 
-.checkbox-container:hover input ~ .checkmark{
-    background-color: #90DDF0;
+/* Hover effect for custom checkbox */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #90DDF0; /* changes color on hover */
 }
 
-.checkbox-container input:checked ~.checkmark{
-    background-color: #07393C;
+/* Checked state for custom checkbox */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #07393C; /* dark teal when checked */
 }
 
+/* Custom checkmark style when checkbox is checked */
 .checkbox-container .checkmark:after {
     content: "";
     display: none;
@@ -219,47 +199,49 @@ cursor: pointer;
     height: 11px;
     border: solid white;
     border-width: 0 3px 3px 0;
-    transform:rotate(45deg);
+    transform: rotate(45deg);
 }
 
-.checkbox-container input:checked ~ .checkmark:after{
+/* Display the custom checkmark when the checkbox is checked */
+.checkbox-container input:checked ~ .checkmark:after {
     display: block;
 }
 
-.submit{
+/* Submit button styles, emphasized for action */
+.submit {
     text-align: center;
 }
 
-.submit button{
-    background-color: #90DDF0;
+.submit button {
+    background-color: #90DDF0; /* light blue background */
     font-size: 1.375rem;
-    color: #fff;
+    color: #fff; /* white text for contrast */
     border: none;
-    border-radius: 8px;
+    border-radius: 8px; /* rounded corners */
     cursor: pointer;
-    padding: 1rem 2rem;
-    transition: all 0.1s;
+    padding: 1rem 2rem; /* comfortable click area */
+    transition: all 0.1s; /* quick transition on hover */
 }
 
-.submit button:hover{
-    background-color: #07393C;
+.submit button:hover {
+    background-color: #07393C; /* dark teal on hover for emphasis */
 }
 
-@media only screen and (max-width: 300px){
-    .password{
-        padding: 1rem;
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 300px) {
+    .password {
+        padding: 1rem; /* less padding in smaller screens */
     }
-    .password .text input{
-        font-size: 1.5rem;
+    .password .text input {
+        font-size: 1.5rem; /* smaller font size for small screens */
     }
-    .password .text input.font-sm{
-        font-size: 1rem;
+    .password .text input.font-sm {
+        font-size: 1rem; /* even smaller when specified */
     }
-    .password .text input.font-xs{
-        font-size: 0.8rem;
+    .password .text input.font-xs {
+        font-size: 0.8rem; /* smaller for extra small specification */
     }
-    .password .text input.font-xxs{
-        font-size: 0.5rem;
+    .password .text input.font-xxs {
+        font-size: 0.5rem; /* minimum size for the smallest specification */
     }
-    
 }
