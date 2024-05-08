@@ -1,9 +1,9 @@
 /* General styling for the body, setting the background color, default font, font weight, text color, and padding around the content */
 body {
-    background-color: #F0EDEE; /* light grayish background */
+    background-color: #26547C; /* light grayish background */
     font-family: "Merriweather", serif; /* serif font for better readability */
     font-weight: 400; /* normal font weight */
-    color: #0A090C; /* dark grayish color for text */
+    color: #EF476F; /* dark grayish color for text */
     padding: 2rem; /* consistent padding around the content */
 }
 
@@ -29,7 +29,7 @@ main {
 /* Subtitle styles under the main title, smaller font size and different color */
 .hero .subtitle {
     font-size: 1.12rem;
-    color: #07393C; /* dark teal color for contrast */
+    color: #06D6A0; /* dark teal color for contrast */
 }
 
 /* Box styling for segments of the interface like password display and settings */
@@ -116,7 +116,7 @@ main {
 .customize .actions {
     display: flex;
     gap: 3rem; /* space between children */
-    color: #2C666E; /* teal text color */
+    color: #06D6A0; /* teal text color */
 }
 
 /* More detailed styles for the password length slider and related elements */
@@ -138,7 +138,7 @@ main {
     width: 18px;
     height: 18px;
     border-radius: 25px;
-    background: #90DDF0; /* light blue */
+    background: #06D6A0; /* light blue */
     cursor: pointer;
 }
 
@@ -146,7 +146,7 @@ main {
     width: 25px;
     height: 25px;
     border-radius: 25px;
-    background: #90DDF0; /* consistent with webkit thumb */
+    background: #06D6A0; /* consistent with webkit thumb */
     cursor: pointer;
 }
 
@@ -174,7 +174,7 @@ main {
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #90DDF0; /* light blue background */
+    background-color: #06D6A0; /* light blue background */
     transition: all 0.2s; /* smooth transition for background color change */
 }
 
@@ -185,7 +185,7 @@ main {
 
 /* Checked state for custom checkbox */
 .checkbox-container input:checked ~ .checkmark {
-    background-color: #07393C; /* dark teal when checked */
+    background-color: #EF476F; /* dark teal when checked */
 }
 
 /* Custom checkmark style when checkbox is checked */
@@ -213,7 +213,7 @@ main {
 }
 
 .submit button {
-    background-color: #90DDF0; /* light blue background */
+    background-color: #06D6A0; /* light blue background */
     font-size: 1.375rem;
     color: #fff; /* white text for contrast */
     border: none;
@@ -224,7 +224,7 @@ main {
 }
 
 .submit button:hover {
-    background-color: #07393C; /* dark teal on hover for emphasis */
+    background-color: #EF476F; /* dark teal on hover for emphasis */
 }
 
 /* Responsive styling for smaller screens */
