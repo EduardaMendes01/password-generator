@@ -1,6 +1,8 @@
 /* General styling for the body, setting the background color, default font, font weight, text color, and padding around the content */
 body {
-    background-color: #26547C; /* light grayish background */
+   background: url("./img/background-Password-B.png") repeat-y;
+   background-position: center;
+   background-attachment: fixed;
     font-family: "Merriweather", serif; /* serif font for better readability */
     font-weight: 400; /* normal font weight */
     color: #EF476F; /* dark grayish color for text */
